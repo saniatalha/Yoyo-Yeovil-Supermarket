@@ -15,55 +15,65 @@
 <body>
     
    <nav class="navbar">
-  <div class="container-fluid align-items-center">
+        <div class="container-fluid align-items-center">
 
-    <a class="navbar-brand d-flex flex-column align-items-center" href="#">
-      <img src="Images/Logo.png" alt="Logo" width="100" height="77" class="d-inline-block">
-      <span class="YoYo-Yeovil">YoYo-Yeovil</span>
-    </a>
+            <a class="navbar-brand d-flex flex-column align-items-center" href="#">
+            <img src="Images/Logo.png" alt="Logo" width="100" height="77" class="d-inline-block">
+            <span class="YoYo-Yeovil">YoYo-Yeovil</span>
+            </a>
 
-    <form class="d-flex align-items-center search-group">
-      <input type="text" class="search-bar" placeholder="Search" aria-label="Search">
-      <button class="input-group-text search-btn" type="submit">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
+            <form class="d-flex align-items-center search-group">
+            <input type="text" class="search-bar" placeholder="Search" aria-label="Search">
+            <button class="input-group-text search-btn" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            </form>
 
-    <button type="button" class="btn btn-outline-primary">User Profile</button>
+            <button type="button" class="btn btn-outline-primary">User Profile</button>
 
-  </div>
+        </div>
 </nav>
 
 
     <main>
 
-        <div class="items-container">
-        <h2 class="items-title">ITEMS LIST</h2>
+        <div class="container-fluid mt-4">
 
-        <div class="items-grid">
+    <div class="row">
 
-        <div class="item-box">Fruits</div>
-        <div class="item-box">Veggies</div>
-        <div class="item-box">Diary Products</div>
-        <div class="item-box">Bakery</div>
-        <div class="item-box">General Products</div>
+        <!-- ITEMS -->
+        <div class="col-md-8">
+            <h3>ITEMS LIST</h3>
 
-        <div class="btn-group" role="group" aria-label="Large button group">
+            <div class="items-grid">
+                <div class="item-box" tabindex="0">Apple - £1.80</div>
+                <div class="item-box" tabindex="0">Banana - £1.50</div>
+                <div class="item-box" tabindex="0">Milk - £1.60</div>
 
-            <button type="button" class="btn btn-outline-primary">Discount</button>
-            <button type="button" class="btn btn-outline-primary">Remove Item</button>
-            <button type="button" class="btn btn-outline-primary">Clear</button>
-
+            </div>
         </div>
-        
-        <br>
 
-            <div class="btn-group" role="group" aria-label="Large button group">
+        <!-- RECEIPT -->
+        <div class="col-md-4">
+            <div class="receipt">
 
-            <button type="button" class="btn btn-outline-primary">Checkout</button>
-            <button type="button" class="btn btn-outline-primary">Print Recei</button>
+                <h4>Receipt</h4>
 
+                <ul id="receiptItems" class="list-group mb-3"></ul>
+
+                <p>Sub Total: <span id="subTotal">£0.00</span></p>
+                <p>VAT: <span id="vat">£0.00</span></p>
+                <p><strong>Total: <span id="total">£0.00</span></strong></p>
+
+                <button class="btn btn-danger w-100 mb-2" onclick="removeSelectedItem()">Remove Item</button>
+                <button class="btn btn-secondary w-100 mb-2" onclick="clearReceipt()">Clear</button>
+                <button class="btn btn-success w-100" onclick="checkout()">Checkout</button>
+
+            </div>
         </div>
+
+    </div>
+</div>
 
     </main>
 
