@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YoYo-Yeovil Store System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--  CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JavaScript -->
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+        <div class="container-fluid align-items-center">
+
+            <a class="navbar-brand d-flex flex-column align-items-center" href="#">
+            <img src="Images/Logo.png" alt="Logo" width="100" height="77" class="d-inline-block">
+            <span class="YoYo-Yeovil">YoYo-Yeovil</span>
+            </a>
+
+            <form class="d-flex align-items-center search-group">
+            <input type="text" class="search-bar" placeholder="Search" aria-label="Search">
+            <button class="input-group-text search-btn" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            </form>
+
+            <button type="button" class="btn btn-outline-primary">User Profile</button>
+
+        </div>
+</nav>
+
+
+<div class="container-fluid mt-4">
+    <div class="row">
+
+        <!-- ITEMS -->
+        <div class="col-md-8">
+            <h3>ITEMS LIST</h3>
+
+            <div class="items-grid">
+                <div class="item-box" onclick="addItem('Apple',1.80)">Apple - £1.80</div>
+                <div class="item-box" onclick="addItem('Banana',1.50)">Banana - £1.50</div>
+                <div class="item-box" onclick="addItem('Orange',1.60)">Orange - £1.60</div>
+                <div class="item-box" onclick="addItem('Spinach',1.80)">Spinach - £1.80</div>
+                <div class="item-box" onclick="addItem('Cucumber',1.50)">Cucumber - £1.50</div>
+                <div class="item-box" onclick="addItem('Carrot',1.60)">Carrot - £1.60</div>
+                <div class="item-box" onclick="addItem('Milk',1.80)">Milk - £1.80</div>
+                <div class="item-box" onclick="addItem('Cheese',1.50)">Cheese - £1.50</div>
+                <div class="item-box" onclick="addItem('Yogurt',1.60)">Yogurt - £1.60</div>
+                <div class="item-box" onclick="addItem('Croissant',1.80)">Croissant - £1.80</div>
+                <div class="item-box" onclick="addItem('Muffins',1.50)">Muffins - £1.50</div>
+                <div class="item-box" onclick="addItem('Raisin Whirl',1.60)">Raisin Whirl x2 - £1.60</div>
+                <div class="item-box" onclick="addItem('Toothpaste',1.80)">Toothpaste - £1.80</div>
+                <div class="item-box" onclick="addItem('Tissues',1.50)">Tissues - £1.50</div>
+                <div class="item-box" onclick="addItem('Bleach',1.60)">Bleach - £1.60</div>
+            </div>
+        </div>
+
+        <!-- RECEIPT -->
+        <div class="col-md-4">
+            <div class="receipt">
+
+                <h4>Receipt</h4>
+
+                <ul id="receiptItems" class="list-group mb-3"></ul>
+
+                <p>Sub Total: <span id="subTotal">£0.00</span></p>
+                <p>VAT: <span id="vat">£0.00</span></p>
+                <p><strong>Total: <span id="total">£0.00</span></strong></p>
+
+                <button class="btn btn-danger w-100 mb-2" onclick="removeSelectedItem()">Remove Item</button>
+                <button class="btn btn-secondary w-100 mb-2" onclick="clearReceipt()">Clear</button>
+                <button class="btn btn-success w-100" onclick="checkout()">Checkout</button>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                    <div class="footer-nav">
+
+                        <button type="button" class="btn btn-outline-primary">Inventory</button>
+                        <button type="button" class="btn btn-outline-primary">Reports</button>
+                        <button type="button" class="btn btn-outline-primary">Settings</button>
+                        <button type="button" class="btn btn-outline-primary">Transactions</button>
+
+                    </div>
+
+                </div>
+  </div>
+</nav>
+
+</footer>
+
+</html>
