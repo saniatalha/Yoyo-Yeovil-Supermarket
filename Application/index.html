@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YoYo-Yeovil Store System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--  CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JavaScript -->
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="Images/Logo.png" width="80">
+            YoYo-Yeovil
+        </a>
+
+        <button class="btn btn-outline-primary">User Profile</button>
+    </div>
+</nav>
+
+
+<div class="container-fluid mt-4">
+    <div class="row">
+
+        <!-- ITEMS -->
+        <div class="col-md-8">
+            <h3>ITEMS LIST</h3>
+
+            <div class="items-grid">
+                <div class="item-box" onclick="addItem('Apple',1.80)">Apple - £1.80</div>
+                <div class="item-box" onclick="addItem('Banana',1.50)">Banana - £1.50</div>
+                <div class="item-box" onclick="addItem('Milk',1.60)">Milk - £1.60</div>
+            </div>
+        </div>
+
+        <!-- RECEIPT -->
+        <div class="col-md-4">
+            <div class="receipt">
+
+                <h4>Receipt</h4>
+
+                <ul id="receiptItems" class="list-group mb-3"></ul>
+
+                <p>Sub Total: <span id="subTotal">£0.00</span></p>
+                <p>VAT: <span id="vat">£0.00</span></p>
+                <p><strong>Total: <span id="total">£0.00</span></strong></p>
+
+                <button class="btn btn-danger w-100 mb-2" onclick="removeSelectedItem()">Remove Item</button>
+                <button class="btn btn-secondary w-100 mb-2" onclick="clearReceipt()">Clear</button>
+                <button class="btn btn-success w-100" onclick="checkout()">Checkout</button>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

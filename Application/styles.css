@@ -1,0 +1,35 @@
+body {
+    background: #f4f4f4;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.item-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.item-box:hover {
+    background: #e9ecef;
+}
+
+.receipt {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.selected {
+    background: #dcdcdc !important;
+}
