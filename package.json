@@ -1,0 +1,23 @@
+{
+  "name": "supermarket",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/saniatalha/Yoyo-Yeovil-Supermarket#readme",
+  "bugs": {
+    "url": "https://github.com/saniatalha/Yoyo-Yeovil-Supermarket/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saniatalha/Yoyo-Yeovil-Supermarket.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
